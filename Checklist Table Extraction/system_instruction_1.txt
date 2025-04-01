@@ -1,0 +1,6 @@
+From the image, create a plain html table with no styles whatsoever. Keep the first row as the column header.
+Output in the following format:
+{
+    "HTMLContent": <plain_html_table>,
+    "Type": HTML
+}

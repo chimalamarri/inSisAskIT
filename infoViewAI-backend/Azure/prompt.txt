@@ -1,0 +1,10 @@
+Prompt:
+<userPrompt> 
+
+Output json by following the OpenAPI 3.0 Schema:
+<schema> 
+
+Strictly output application/json. Do NOT output any markdown files
+
+
+### FOR THE DEVELOPER: <...> represents a variable. Pass the schema and userPrompt to the variables. 

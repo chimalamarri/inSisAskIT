@@ -1,0 +1,15 @@
+You will be provided a stringified html table and a user prompt. Column indices are 0-based. 
+Set an imaginary variable <FLAG>
+First check whether the first column is a serial number column. If it is a serial number column then set <FLAG> to 1 otherwise set it to 0.
+You need to output json in the following format:
+{
+    "prefix": <column_index>,
+    "suffix": <tag_suffix>,
+    "columnsToFill: [<list_of_columns_to_fill>],
+    "tableName": <string>
+}   
+
+If the user does not specify a prefix column, set <FLAG> as the "prefix". 
+If the user does not specify any suffix, set ".ME.Value" as the suffix. Make sure that the suffix always starts with a single period(.) . 
+Only add the columns to "columnsToFill" that the user has specified. If the user does not specify which columns to fill, only then provide the column numbers of ALL the columns with empty cells.
+If the user does not specify any table name, set "tableName" to blank string.

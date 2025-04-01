@@ -1,0 +1,7 @@
+{
+    "API_URL": "https://prod-13.centralindia.logic.azure.com:443/workflows/4a1a053f9c6c4b93a5e615aba9a3954c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=qb6YJMoftPYh5lF3UMAdJ8eMPVy80bRBTsXRNbQzlxI",
+    "TAG_DETAIL_SEARCH_API_PREFIX": "http://localhost/inSis/api/InfoViewApp/GetInfoviewTag?uname=admin&tagNames=",
+    "INSIS_TOKEN": "YWRtaW4=:WTVvS2NZNDUrMXZRamEvR1FQL1hBM1UyMlZLRm9PR1JLTU5EWVE4cEh6azNpbGUxdE1VNG9HQjVPNXlPYmJMQXF0MjNZL01wUmlhaU9FdXh0NEZmNVE9PQ==",
+    "INSIS_KEY": "aW5TaXNTdWl0ZQ==",
+    "TAG_SEARCH_API": "http://103.125.160.172/inSis/api/InfoviewApp/TagSummaryDetailsInfoByProperties?pageNo=1&pageSize=100000&cmpid=1&api_key=''"
+}

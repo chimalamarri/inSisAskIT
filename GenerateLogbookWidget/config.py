@@ -1,0 +1,2 @@
+# copilot_api_for_generate_logbook_widget = "https://prod-12.centralindia.logic.azure.com:443/workflows/d92c95f83aa7492d82d84f4e5ae0e3eb/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-KUhoSKtCjRRIm7Y0-ZFtRsrL8MGx0vXCavZCsB1vUg"
+copilot_api_for_generate_logbook_widget = "https://prod-24.centralindia.logic.azure.com:443/workflows/7d26cdea1a5c432e8a5f58bfbe02438c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=a6Rt9NlEfvk3yC2uJk3_iTFTLzQUMlrniQHOIm6bGvg"

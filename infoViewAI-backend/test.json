@@ -1,0 +1,132 @@
+{
+    "type": "object",
+    "properties": {
+        "Tags" : {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "description": "Examples of tag: 383FI0504.PV.Value, Fan14.Current_Rph.Sum, Incomer3.ActiveEnergyImp.Total"
+            },
+            "nullable": false
+        },
+        "StartAbsoluteDateTime" : {
+            "type": "string",
+            "description": "Specify only if UseRelativeTime is false, otherwise set it to null. Specify the start date and time in the following format: 'DD MMM YYYY HH:MM:SS GMT'. Examples: '16 Jan 2025 08:27:31 GMT', '18 Feb 2025 08:57:31 GMT'.",
+            "nullable": true
+        },
+        "EndAbsoluteDateTime" : {
+            "type": "string",
+            "description": "Specify this only if UseRelativeTime is false, otherwise set it to null. Specify the end date and time in the following format: 'DD MMM YYYY HH:MM:SS GMT'. Examples: '23 Feb 2025 09:27:31 GMT', '29 Apr 2025 08:57:31 GMT'.",
+            "nullable": true
+        },
+        "UseRelativeTime" : {
+            "type": "boolean",
+            "description": "Set it to true only if relative times like now, hour, today, current week, current month, current year, yesterday, last week, last month, last year, current shift, next shift are used in the prompt. Set this property only if there are no dates mentioned in the prompt",
+            "nullable": false
+        },
+        "StartRelativeTimeBase" : {
+            "type": "string",
+            "enum": ["Now","Hour","Today","CurrentWeek","CurrentMonth","CurrentYear","Yesterday","LastWeek","LastMonth","LastYear","Shift","NextShift"],
+            "description": "Specify this property only if UseRelativeTime is true",
+            "nullable": true
+        },
+        "StartRelativeTimeSecondaryOperand": {
+            "type": "number",
+            "description": "Specify this property only if UseRelativeTime is true. If this property is not mentioned in the prompt, set it to null",
+            "nullable": true
+        },
+        "StartRelativeTimeSecondaryOperandUnit": {
+            "type": "string",
+            "enum": ["Minute","Hour","Day","Week","Month","Quarter","Year"],
+            "description": "Specify this property only if UseRelativeTime is true. If StartRelativeTimeSecondaryOperand is null, set this property to null",
+            "nullable": true
+        },
+        "StartRelativeTimeOperator": {
+            "type": "string",
+            "enum": ["+","-"],
+            "description": "Specify this property only if UseRelativeTime is true. This operator joins 'StartRelativeTimeBase' with 'StartRelativeTimeSecondaryOperand'. Example: 30 days before last week = 'LastWeek'-'30''Day'",
+            "nullable": true
+        },
+        "EndRelativeTimeBase": {
+            "type": "string",
+            "enum": ["Now","Hour","Today","CurrentWeek","CurrentMonth","CurrentYear","Yesterday","LastWeek","LastMonth","LastYear","Shift","NextShift"],
+            "description": "Specify this property only if UseRelativeTime is true",
+            "nullable": true
+        },
+        "EndRelativeTimeSecondaryOperand": {
+            "type": "number",
+            "description": "Specify this property only if UseRelativeTime is true. If this property is not mentioned in the prompt, set it to null",
+            "nullable": true
+        },
+        "EndRelativeTimeSecondaryOperandUnit": {
+            "type": "string",
+            "enum": ["Minute","Hour","Day","Week","Month","Quarter","Year"],
+            "description": "Specify this property only if UseRelativeTime is true. If EndRelativeTimeSecondaryOperand is null, set this property to null",
+            "nullable": true
+        },
+        "EndRelativeTimeOperator": {
+            "type": "string",
+            "enum": ["+","-"],
+            "description": "Specify this property only if UseRelativeTime is true. This operator joins 'EndRelativeTimeBase' with 'EndRelativeTimeSecondaryOperand'. Example: 30 days before last week = 'LastWeek'-'30''Day'",
+            "nullable": true
+        },
+        "TimeIntervalValue": {
+            "type": "number"
+        },
+        "TimeIntervalValueUnit": {
+            "type": "string",
+            "enum": ["Second","Minute","Hour","Day","Week","Month","Quarter","Year"]
+        },
+        "TimeIntervalSpread": {
+            "type": "string",
+            "enum": ["Before","After","Around"],
+            "description": "Before includes last value. After includes first value. Around includes both first and last value"
+        },
+        "ViewType": {
+            "type": "string",
+            "enum": ["Grid","Chart","Gauge","Calendar"]
+        },
+        "GaugeType": {
+            "type": "string",
+            "enum": ["Radial","Linear"],
+            "description": "Set this property only if ViewType is Gauge",
+            "nullable": true
+        },
+        "GaugeOrientation": {
+            "type": "string",
+            "enum": ["LinearVertical","LinearHorizontal"],
+            "description": "Set this property only if ViewType is Gauge and GaugeType is Linear",
+            "nullable": true
+        },
+        "ChartType": {
+            "type": "string",
+            "enum": ["Line","Bar","Column","Pie","Donut","Funnel","Bullet","Scatter","Bubble","BoxPlot","Radar","Waterfall","Progress"],
+            "description": "Set this property only if ViewType is 'Chart'. If ViewType is anything other than 'Chart', make this property null",
+            "nullable": true
+        },
+        "MetricTypePerTag":{
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "MetricType": {
+                        "type": "string",
+                        "enum": ["Average","Change","ProcessCapability(Cp)","ProcessCapabilityIndex(Cpk)","LowerControlLimit","Maximum","Median","Minimum","MonthToDate","PercentTimeInAlarmRange","PercentTimeInNormalRange","PercentTimeOutsideNormalRange","ProcessPerformance(Pp)","ProcessPerformanceIndex(Ppk)","Quartile1","Quartile3","Range","StandardDeviation","StatusCounter","Sum","ToDate","Total","UpperControlLimit","Value"],
+                        "description": "default: 'Value'",
+                        "nullable": true
+                    },
+                    "Tag": {
+                        "type": "string",
+                        "description": "The tag to which the MetricType is associated"
+                    }
+                }
+                
+            }
+        },
+        "DisplayAsTable": {
+            "type": "boolean",
+            "description": "Set this property only if ViewType is Grid"
+        }
+    },
+    "required": ["Tags","UseRelativeTime"]
+}

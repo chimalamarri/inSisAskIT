@@ -1,0 +1,26 @@
+{
+    "ChartType": "Bullet",
+    "DisplayAsTable": null,
+    "EndAbsoluteDateTime": null,
+    "EndRelativeTimeBase": "Today",
+    "EndRelativeTimeOperator": null,
+    "EndRelativeTimeSecondaryOperand": null,
+    "EndRelativeTimeSecondaryOperandUnit": null,
+    "GaugeOrientation": null,
+    "GaugeType": null,
+    "MetricTypePerTag": [],
+    "StartAbsoluteDateTime": null,
+    "StartRelativeTimeBase": "Yesterday",
+    "StartRelativeTimeOperator": "-",
+    "StartRelativeTimeSecondaryOperand": 30,
+    "StartRelativeTimeSecondaryOperandUnit": "Day",
+    "Tags": [
+      "324#_DSF.TRE",
+      "2543_asd.fre"
+    ],
+    "TimeIntervalSpread": null,
+    "TimeIntervalValue": null,
+    "TimeIntervalValueUnit": null,
+    "UseRelativeTime": true,
+    "ViewType": "Chart"
+}
